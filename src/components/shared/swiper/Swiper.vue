@@ -14,7 +14,7 @@ import { Swipe, SwipeItem } from "mint-ui";
 Vue.component(Swipe.name, Swipe);
 Vue.component(SwipeItem.name, SwipeItem);
 export default {
-  name: "SwipeComponent",
+  name: "Swiper",
   props: ["imgList"]
 };
 </script>
@@ -26,7 +26,7 @@ export default {
   text-align: center;
 }
 .swipe img {
-  width: 100%;
+  width: auto;
   height: calc(100vw * 0.5);
 }
 </style>

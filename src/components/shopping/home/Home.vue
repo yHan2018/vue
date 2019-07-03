@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="banner">
-      <SwipeComponent :imgList="imgList"></SwipeComponent>
+      <Swiper :imgList="imgList"></Swiper>
     </div>
     <!-- 九宫格区域 -->
     <ul class="mui-table-view mui-grid-view mui-grid-9">
@@ -45,7 +45,7 @@
   </div>
 </template>
 <script>
-import SwipeComponent from "../../shared/swipe/Swipe.component.vue";
+import Swiper from "../../shared/swiper/Swiper.vue";
 import { Toast } from "mint-ui";
 
 export default {
@@ -54,7 +54,7 @@ export default {
     imgList: []
   }),
   components: {
-    SwipeComponent
+    Swiper
   },
   created() {
     this.$http.get("api/getlunbo").then(result => {
