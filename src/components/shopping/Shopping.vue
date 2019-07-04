@@ -2,6 +2,7 @@
   <div class="app-container">
     <Header/>
     <div class="content">
+      <!-- <transition :name="transitionName"> -->
       <transition>
         <!-- <mt-tab-container v-model="active">
         <mt-tab-container-item id="tab-container1">
@@ -40,6 +41,18 @@ export default {
   components: {
     Tab,
     Header
+  },
+  data() {
+    return {
+      transitionName: "slide-left"
+    };
+  },
+  beforeRouteUpdate(to, from, next) {
+    console.log(1);
+    const toDepth = to.path.split("/").length;
+    const fromDepth = from.path.split("/").length;
+    // this.transitionName = toDepth < fromDepth ? "slide-right" : "slide-left";
+    next();
   }
 };
 </script>

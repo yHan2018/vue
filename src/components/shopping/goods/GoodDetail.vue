@@ -4,7 +4,7 @@
       @before-enter="beforeEnter"
       @enter="enter"
       @after-enter="afterEnter">
-      <div class="ball" v-show="ballFlag" ref="ball"></div>
+      <div class="ball" v-show="ballFlag" ref="ball" :name="'ball'"></div>
     </transition>
 
     <!-- 商品轮播图区域 -->

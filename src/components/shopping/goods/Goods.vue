@@ -18,6 +18,7 @@
 </template>
 <script>
 import { Toast } from "mint-ui";
+import { constants } from "crypto";
 export default {
   name: "Goods",
   data() {
@@ -66,6 +67,10 @@ export default {
   },
   created() {
     this.getGoods();
+  },
+  beforeRouteEnter(to, from, next) {
+    console.log("beforeRouteEnter", to);
+    next();
   }
 };
 </script>

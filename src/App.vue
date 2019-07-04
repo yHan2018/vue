@@ -14,7 +14,7 @@ Vue.use(VueRouter);
 
 export default {
   name: "app",
-  components: {}
+  components: {}  
 };
 </script>
 

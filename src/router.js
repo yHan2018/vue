@@ -73,6 +73,18 @@ const router = new VueRouter({
   },
 
   ],
-  linkActiveClass: 'mui-active'
+  linkActiveClass: 'mui-active',
+  scrollBehavior(to, from, savedPosition) {
+    console.log('---------------');
+    console.log(to, from, savedPosition);
+    return { x: 0, y: 0 };
+  }
 });
+router.beforeEach((to, from, next) => {
+  // console.log('to', to);
+  // console.log('from', from);
+  // console.log('next', next);
+  next();
+});
+router.afterEach();
 export default router;
